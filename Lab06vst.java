@@ -19,20 +19,27 @@ public class Lab06vst extends Applet
 
 
         // Draw Random Lines
-        Random rndint  = new Random(12345);
-        for(int x = 1; x <= 50; x++)
-        {
-            int x1 = rndint.nextInt(50)
-            int y1 = rndint.nextInt(50)
-            int x2 = rndint.nextInt(150)
-            int y2 = rndint.nextInt(150)
 
-            g.setColor(new Color(225, 0, 0));
-            g.drawLine(x1, y2, x2, y2);
+        Random rndint  = new Random(1234);
+        // lets 50 lines be drawn
+        for(int x = 1; x <= 100; x++)
+        {
+            // Lines (Length and location)
+            int x1 = rndint.nextInt(391)+10;
+            int y1 = rndint.nextInt(291)+10;
+            int x2 = rndint.nextInt(391)+10;
+            int y2 = rndint.nextInt(291)+10;
+
+            // Colors
+            int red = rndint.nextInt(255);
+            int green = rndint.nextInt(255);
+            int blue = rndint.nextInt(255);
+
+            g.drawLine(x1, y1, x2, y2);
+            g.setColor(new Color(red,green,blue));
+            // increments the loop +1
             x += 1;
         }
-
-
 
         // Draw Random Squares
 
